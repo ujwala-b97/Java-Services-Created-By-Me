@@ -1,0 +1,27 @@
+##This queue servuic eis for Autoalarm&labelling
+reciever_port=8082
+send_port=8084
+server_ip=172.16.0.125
+num_threads=500
+#api_endpoint=http://devsiem1.ltssecure.com/ossim/av_asset/api/get_ticket_alarm.php?ticket_id=
+api_endpoint=https://172.16.0.123/ossim/av_asset/api/get_ticket_alarm.php?ticket_id=
+#api_endpoint_AlarmId=http://devsiem1.ltssecure.com/ossim/av_asset/api/get_alarm.php?alarm_id=
+api_endpoint_AlarmId=https://172.16.0.123/ossim/av_asset/api/get_alarm.php?alarm_id=
+api_server_url=http://172.16.0.125:9000/api/search/universal/relative
+#api_server_url=http://172.16.0.125:9000
+#siem_notification_endpoint=http://devsiem1.ltssecure.com/ossim/av_asset/api/close_case_alarm.php
+siem_notification_endpoint=http://172.16.0.123/ossim/av_asset/api/close_case_alarm.php
+input_id=68501f86f0b800466ec38c1b
+apiserver_username=admin
+apiserver_password=Leo@pna123
+#Alarm_Probability Dynamic
+yearly_Probability=365
+six_months_Probability=180
+three_months_Probability=90
+monthly_Probability=30
+#risk_dashboard_siem_api=http://devsiem1.ltssecure.com/ossim/av_asset/api/update_asset_risk.php
+risk_dashboard_siem_api=http://172.16.0.123/ossim/av_asset/api/update_asset_risk.php
+##Newly Added Python Parser
+python_path=/usr/bin/python3
+parser_script=/opt/log_enrichment/api_parser.py
+siem_enrichment_endpoint=http://172.16.0.123/ossim/av_asset/api/alarm_details.php
